@@ -23,13 +23,13 @@ public class OneToManyDao {
 //First Method-> To make connection
 	   public void connect() {
 	    //activating Hibernate Framework
-	  	  Configuration cfg = new Configuration().configure().addAnnotatedClass(student.class).addAnnotatedClass(laptop.class);
+	  	   cfg = new Configuration().configure().addAnnotatedClass(student.class).addAnnotatedClass(laptop.class);
 	    //buildSessionFactory() method gathers the meta-data which is in the cfg Object.
-		  SessionFactory sf = cfg.buildSessionFactory();
+		  sf = cfg.buildSessionFactory();
 	   //opening the Connection/Session with Database software through Hibernate Framework.
-		 Session ss = sf.openSession();
+		 ss = sf.openSession();
 				
-		  Transaction tx =ss.beginTransaction();
+		 tx =ss.beginTransaction();
 	   }
 	
 

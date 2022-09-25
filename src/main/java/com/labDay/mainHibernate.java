@@ -38,10 +38,11 @@ public class mainHibernate {
     	//creating one to manydao class object to communication
     	OneToManyDao dao = new OneToManyDao();
     	
-    	while(op<6)
+    	while(op<5)
     	{
-    	out.println("\nPress 1 - ***To Add STUDENT \nPress 2 - ***To Add LAPTOP \nPress 3 - ***To Print STudent \nPress 4 - ***To Print LAPTOP \nPress 5 - ***TO Delete STUDENT \nPress 6 - ***TO Exit");
-    	out.println("\nEnter Your Choice : ");
+    		out.println("\t\t\t\t--------------WELCOME-------------------------------");
+    	out.println("\nPress 1 - ***To Add STUDENT  \nPress 2 - ***To Print STUDENT \nPress 3 - ***To Print LAPTOP \nPress 4 - ***TO Delete STUDENT \nPress 5 - ***TO Exit");
+    	out.print("\nEnter Your Choice : ");
     	op = obj.nextInt();
     	
     	switch(op) {
@@ -83,6 +84,7 @@ public class mainHibernate {
 			s.setSdtLaptop(lapList);
 			//calling register method
 			dao.registerSdt(s);
+			out.println("Successfully Added..!");
 			//calling disconnect method
 			dao.disconnect();
 			
